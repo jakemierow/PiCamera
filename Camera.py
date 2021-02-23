@@ -11,7 +11,7 @@ picture = 1
 while True:
     try:
         button.wait_for_press()
-        camera.annotate_text_size = 50 # (values 6 to 160, default is 32)
+        camera.annotate_text_size = 50
         camera.annotate_text = datetime.now().strftime('%A %d %b %Y %H:%M')
         camera.capture('/home/pi/pictures/picture%03d.jpg' % picture)
         picture += 1
